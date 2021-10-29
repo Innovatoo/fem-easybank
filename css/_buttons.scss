@@ -1,0 +1,33 @@
+.cta__btn{
+  //display: none;
+  background: #31D35C;
+  background: -webkit-linear-gradient(left, #31D35C, #2BB7DA);
+  background: -moz-linear-gradient(left, #31D35C, #2BB7DA);
+  background: linear-gradient(to right, #31D35C, #2BB7DA);
+  border-radius: 40px;
+  text-decoration: none;
+  color: white;
+
+  cursor: pointer;
+  width: max-content;
+
+  &:hover{
+    background: #4ED772;
+    background: -webkit-linear-gradient(left, #4ED772, #4FC1DD);
+    background: -moz-linear-gradient(left, #4ED772, #4FC1DD);
+    background: linear-gradient(to right, #4ED772, #4FC1DD);
+  }
+
+  &--large{
+    padding: 15px 40px;
+    font-size: 15px;
+  }
+  &--medium{
+    padding: 15px 40px;
+    font-size: 20px;
+
+  }
+
+
+
+}
