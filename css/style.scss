@@ -15,6 +15,7 @@
 body{
   font-family: $font-family;
   font-size: 62.5%;
+  position: relative;
 }
 
 
@@ -33,7 +34,7 @@ body{
   flex-direction: column;
   @media only screen and (max-width: 1440px) {
     width: 100%;
-    text-align: center;
+    //text-align: center;
   }
 }
 
@@ -72,7 +73,7 @@ body{
 
 .section-heading{
   z-index: 100;
-  overflow: hidden;
+  //overflow: hidden;
   position: relative;
   background-color: white;
 }
@@ -84,6 +85,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  //@media only screen and (max-width: )
 
   .logo{
     width: auto;
@@ -97,13 +100,17 @@ body{
   }
   .nav{
     &__item {
-      padding: 0 45px;
+      padding: 0 40px;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       @media only screen and (max-width: 1440px) {
-        padding: 0 1.5rem;
+        //padding: 0 15px;
+      }
+      @media only screen and (max-width: 1200px)
+      {
+        //padding: 0 15px;
       }
     }
 
@@ -119,6 +126,18 @@ body{
     }
   }
 }
+
+.navigation-main{
+  @media only screen and (max-width: 1020px){
+    display: none !important;
+  }
+}
+.cta-btn-header-desktop{
+  @media only screen and (max-width: 1020px){
+    display: none !important;
+  }
+}
+
 
 .navigation-main .nav__item{
   border-bottom: 4px solid transparent ;
@@ -138,9 +157,84 @@ body{
   display: none;
 }
 
+input[type="checkbox"]:checked ~ #mobile-nav{
+  display: flex !important;
+}
+
+
+
 .mobile-nav-label{
   display: none;
+  cursor: pointer;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  @media only screen and (max-width: 1020px){
+    display: block !important;
+    margin-right: 15px;
+    width: 30px;
+    height: auto;
+
+  }
 }
+
+.mobile-nav{
+  margin-top: 30px;
+  display: none !important;
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  z-index: 100;
+  top: 80px;
+  left: 0;
+  //display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+
+}
+.nav-mobile-list{
+  width: 85%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+
+  li{
+    list-style: none;
+    text-align: center;
+
+    &:not(last-child){
+      margin-bottom: 20px;
+  }
+  }
+  a{
+    text-decoration: none;
+    color: $color-primary-dark-blue;
+    font-size: 25px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // hero section ///////////////////////////
 .home-section-hero{
@@ -149,139 +243,57 @@ body{
 }
 .home-section-hero .container{
   display: flex;
-  align-items: center;
-  height: 70vh;
-  @media only screen and (max-width: 1440px) {
-    //justify-content: center;
-  }
-  @media only screen and (max-width: 1350px) {
+  justify-content: center;
+  min-height: 85vh;
 
-  }
-  @media only screen and (max-width: 1230px) {
-
-  }
-  @media only screen and (max-width: 1100px) {
-
-  }
   @media only screen and (max-width: 1000px) {
-    align-items: normal;
-    margin-top: 65%;
+    //align-items: normal;
+    //margin-top: 65%;
   }
   @media only screen and (max-width: 900px) {
-    justify-content: center;
+    align-items: center;
+    min-height: 55vh;
   }
-  @media only screen and (max-width: 800px) {
-    justify-content: center;
-  }
-  @media only screen and (max-width: 700px) {
-    justify-content: center;
-  }
-  @media only screen and (max-width: 600px) {
-    justify-content: center;
-  }
-  @media only screen and (max-width: 500px) {
-    justify-content: center;
-  }
-
-
 }
 
-.hero-background-image{
+.hero-bg-image-desktop{
   position: absolute;
-}
-
-.hero-background-image-back{
-  width: 1300px;
-  height: auto;
-  right: -28%;
-  top: -38%;
-  @media only screen and (max-width: 1440px) {
-    right: -35%;
-    top: -38%;
-  }
-  @media only screen and (max-width: 1350px) {
-    right: -45%;
-    top: -38%;
-  }
-  @media only screen and (max-width: 1250px) {
-    right: -55%;
-    top: -38%;
-  }
-  @media only screen and (max-width: 1100px) {
-    right: -65%;
-    top: -38%;
-  }
-  @media only screen and (max-width: 1080px) {
-    right: -75%;
-    top: -38%;
-  }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 900px){
     display: none;
-
-    //width: 1000px;
   }
 }
-.hero-background-image-back-mobile{
+
+.hero-bg-image-mobile{
   display: none;
-
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 900px){
     display: block;
-    width: 1000px;
-    right: 0;
-    top: -80%;
   }
 }
 
 
-.hero-background-image-front{
-  width: 50%;
-  top: -20%;
-  right: -10%;
-  z-index: 5;
-
-  @media only screen and (max-width: 1440px) {
-
-  }
-  @media only screen and (max-width: 1270px) {
-
-  }
-  @media only screen and (max-width: 1000px) {
-    position: absolute;
-    width: 100%;
-    right: 0;
-    //transform: translateX(+15%);
-    top: -60%;
-  }
-  @media only screen and (max-width: 900px) {
-    top: -50%;
-  }
-  @media only screen and (max-width: 800px) {
-    top: -40%;
-  }
-  @media only screen and (max-width: 700px) {
-    top: -40%;
-  }
-  @media only screen and (max-width: 600px) {
-    top: -40%;
-  }
-  @media only screen and (max-width: 500px) {
-    top: -40%;
-  }
-  @media only screen and (max-width: $mobile-size) {
-    top: -40%;
-  }
-}
 
 .hero__text--box{
   //height: 500px;
   width: 500px;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 1100px) {
+    width: 45%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 // about section ///////////////////////////
 .home-section-about{
+  @media only screen and (max-width: 1440px) {
 
+    text-align: center;
+  }
   background-color: $color-very-light-gray;
   .container{
     min-height: 600px ;
@@ -328,9 +340,10 @@ body{
     flex-direction: column;
     @media only screen and (max-width: 1440px) {
       width: 500px !important;
+      align-items: center;
     }
     @media only screen and (max-width: 1100px) {
-      width: 400px !important;
+      //width: 600px !important;
     }
     @media only screen and (max-width: 900px) {
       width: 100% !important;
@@ -349,7 +362,9 @@ body{
 
 // articles section ///////////////////////////
 .home-section-articles{
-
+  @media only screen and (max-width: 1440px) {
+    text-align: center;
+  }
   h2{
     margin-bottom: 80px;
   }
@@ -367,10 +382,10 @@ body{
   .articles__item{
     width: 300px;
     @media only screen and (max-width: 1440px) {
-      width: 600px;
+      width: 500px;
     }
     @media only screen and (max-width: 1285px) {
-      width: 80%;
+
     }
     img{
       width: 100%;
@@ -391,8 +406,10 @@ body{
   .container{
     display: flex;
     flex-direction: row;
-
     min-height: 200px;
+    @media only screen and (max-width: 1000px){
+      flex-direction: column;
+    }
   }
 
 
@@ -414,7 +431,10 @@ body{
     flex-direction: column;
     height: 200px !important;
     justify-content: space-evenly;
-
+    @media only screen and (max-width: 1000px){
+      width: 100% !important;
+      align-items: center;
+    }
     .logo{
       width: 200px;
       height: auto  ;
@@ -425,6 +445,11 @@ body{
   &__nav{
     display: flex;
     flex-wrap: wrap;
+    @media only screen and (max-width: 1000px){
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+    }
   }
 
 }
@@ -438,31 +463,48 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: 1000px){
+      width: 300px !important;
+      align-items: center;
+    }
   }
 
 
 }
-.nav{
-  &__item{
-    padding: 10px 0;
-    width: 250px;
-    text-align: start;
-  }
-  &__link{
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
 
-    &:hover{
-      color: $color-primary-lime-green;
+.footer{
+  .nav{
+    &__item{
+      padding: 10px 0;
+      width: 250px;
+      text-align: start;
+      @media only screen and (max-width: 1440px) {
+        width: 150px;
+      }
+      @media only screen and (max-width: 1270px) {
+
+      }
+      @media only screen and (max-width: 1000px) {
+        text-align: center;
+      }
+      @media only screen and (max-width: 900px) {
+
+      }
+    }
+    &__link{
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+
+      &:hover{
+        color: $color-primary-lime-green;
+      }
     }
   }
 }
 
-.copyright-text{
-  color: $color-grayish-blue;
-  font-size: 15px;
-}
+
+
 
 
 

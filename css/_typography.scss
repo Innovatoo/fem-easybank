@@ -3,6 +3,22 @@
   font-weight: lighter;
   color: $color-primary-dark-blue;
   margin-bottom: 40px;
+
+  @media only screen and (max-width: 1100px) {
+    font-size: 50px;
+  }
+  @media only screen and (max-width: 1000px) {
+    font-size: 45px;
+  }
+  @media only screen and (max-width: 800px) {
+    font-size: 40px;
+  }
+
+  .hero-h1-break{
+    @media only screen and (max-width: 900px){
+      display: none;
+    }
+  }
 }
 .heading-2{
   font-size: 38px;
@@ -28,6 +44,10 @@
   font-size: 20px;
   line-height: 30px;
   color: $color-grayish-blue;
+
+  @media only screen and (max-width: 1100px) {
+    font-size: 17px;
+  }
 }
 .paragraph-2{
   font-size: 18px;
@@ -38,7 +58,13 @@
 
 
 
-
+.copyright-text{
+  color: $color-grayish-blue;
+  font-size: 15px;
+  @media only screen and (max-width: 420px){
+    font-size: 13px;
+  }
+}
 
 
 

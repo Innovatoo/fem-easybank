@@ -16,13 +16,17 @@
   </style>
 </head>
 <body>
+
+
   <section class="section section-heading">
     <div class="container">
       <header class="header">
+        <input type="checkbox" class="mobile-nav-checkbox" id="mobile-nav-checkbox">
+
         <a href="#" class="">
           <img src="images/logo.svg" alt="logo easybank" class="logo">
         </a>
-        <nav class="navigation-main">
+        <nav class="navigation-main navigation-main" id="main-nav">
           <div class="nav__item">
             <a href="#" class="nav__link">Home</a>
           </div>
@@ -40,35 +44,47 @@
           </div>
         </nav>
 
-        <a href="#" class="cta__btn cta__btn--large">Request Invite</a>
-        <label for="mobile-nav" class="mobile-nav-label">
+        <a href="#" class="cta__btn cta__btn--large cta-btn-header-desktop">Request Invite</a>
+        <label for="mobile-nav-checkbox" class="mobile-nav-label">
           <img src="images/icon-hamburger.svg" alt="hamburger menu icon">
         </label>
-        <input type="checkbox" class="mobile-nav-checkbox" id="mobile-nav">
+
+        <div class="mobile-nav" id="mobile-nav">
+          <ul class="navigation-main__mobile nav-mobile-list">
+            <li class="nav__item--mobile">
+              <a href="#" class="nav__link--mobile">Home</a>
+            </li>
+            <li class="nav__item--mobile">
+              <a href="#" class="nav__link--mobile">About</a>
+            </li>
+            <li class="nav__item--mobile">
+              <a href="#" class="nav__link--mobile">Contact</a>
+            </li>
+            <li class="nav__item--mobile">
+              <a href="#" class="nav__link--mobile">Blog</a>
+            </li>
+            <li class="nav__item--mobile">
+              <a href="#" class="nav__link--mobile">Careers</a>
+            </li>
+          </ul>
+        </div>
+
+
       </header>
+
     </div>
   </section>
 
   <section class="section home-section-hero">
-    <img src="images/bg-intro-desktop.svg" alt="" class="hero-background-image-back hero-background-image">
-    <img src="images/bg-intro-mobile.svg" alt="" class="hero-background-image-back-mobile hero-background-image">
-    <img src="images/image-mockups.png" alt="" class="hero-background-image-front hero-background-image">
+<!--    <img src="images/bg-intro-desktop.svg" alt="" class="hero-background-image-back hero-background-image">-->
+<!--    <img src="images/image-mockups.png" alt="" class="hero-background-image-front hero-background-image">-->
+    <img src="images/hero-background-desktop.svg" alt="hero image desktop" class="hero-bg-image-desktop">
+    <img src="images/hero-background-mobile.svg" alt="hero image mobile" class="hero-bg-image-mobile">
 
 
-<!--    <div class="container">-->
-<!--      <div class="hero__text&#45;&#45;box">-->
-<!--        <h1 class="heading-1 u-margin-bottom-20">Next generation <br>digital banking</h1>-->
-<!--        <p class="paragraph-1 u-margin-bottom-40">-->
-<!--          Take your financial life online. Your Easybank account will be a one-stop-shop-->
-<!--          for spending, saving, budgeting, investing, and much more.-->
-<!--        </p>-->
-<!--        <a href="#" class="cta__btn cta__btn&#45;&#45;medium">Request Invite</a>-->
-<!--      </div>-->
-<!--    </div>-->
     <div class="container">
-
       <div class="hero__text--box">
-        <h1 class="heading-1 u-margin-bottom-20">Next generation <br>digital banking</h1>
+        <h1 class="heading-1 u-margin-bottom-20">Next generation <br class="hero-h1-break">digital banking</h1>
         <p class="paragraph-1 u-margin-bottom-40">
           Take your financial life online. Your Easybank account will be a one-stop-shop
           for spending, saving, budgeting, investing, and much more.
@@ -76,6 +92,10 @@
         <a href="#" class="cta__btn cta__btn--medium">Request Invite</a>
       </div>
     </div>
+
+
+
+
 
 
 
@@ -194,7 +214,7 @@
   <footer class="footer section">
     <div class="container">
       <div class="footer__left footer__block">
-        <img src="images/logo.svg" alt="Logo Easybank" class="logo">
+        <img src="images/logo-white.svg" alt="Logo Easybank" class="logo">
         <div class="social-media__wrapper">
           <a href="#" class="social-media__link">
             <img src="images/icon-facebook.svg" alt="icon facebook">

@@ -46,6 +46,12 @@
 .u-section-padding-tb-80{
   padding-top: 80px!important;
   padding-bottom: 80px !important;
+
+
+  @media only screen and (max-width: 1085px){
+    padding-top: 40px!important;
+    padding-bottom: 40px !important;
+  }
 }
 
 
